@@ -9,12 +9,10 @@ html {
     background: inherit;
     position: relative;
 }
-li {
-    list-style: none;
-}
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 /*****************************************/
@@ -40,13 +38,12 @@ body {
 }
 p {
     color: var(--grey);
+    margin: 0;
 }
-h2 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.7;
-    text-align: center;
+h1, h2, h3, p {
+    padding-top: 0;
 }
+
 h3 {
     font-weight: 500;
     font-size: 16px;
@@ -56,7 +53,39 @@ h3 {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 15px;
 }
+.flexbox {
+    display: flex;
+    align-items: center;
+}
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.grid-item {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
 .link {
     color: inherit;
     text-decoration: none;
@@ -66,7 +95,7 @@ h3 {
 .blue {
     color: var(--blue);
 }
-
+/****************************/
 
 /** Logo **/
 .logo-link {
@@ -75,17 +104,32 @@ h3 {
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    margin-right: 95px;
 }
 .logo-link:hover .blue {
     color: var(--black);
 }
 
 /** Header **/
-
+.header {
+    padding: 25px 0;
+}
+.header .contacts {
+    display: inline-flex;
+}
 .contacts-item-link {
     color: var(--grey);
 }
+.nav {
+    margin-right: auto;
+}
 
+.menu {
+    display: inline-flex;
+}
+.menu-item:not(:last-child) {
+    margin-right: 50px;
+}
 .menu-item .menu-item-link {
     font-weight: 500;
 }
@@ -95,13 +139,25 @@ h3 {
 {
     color: var(--blue);
 }
-
+.contacts-item:not(:last-child) {
+    margin-right: 50px;
+}
 
 /** Intro **/
+.intro {
+    background: var(--dark);
+}
+.intro-content{
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 200px 0;
+}
 .intro-title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
+    color: var(--white);
 
     text-align: center;
     letter-spacing: 0.06em;
@@ -131,9 +187,48 @@ h3 {
 
 
 /** Section **/
+.section {
+    padding: 94px 0;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.7;
+    text-align: center;
+}
 
+
+/** Gains **/
+.gains {
+    padding-bottom: 0;
+}
+.gain-title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.gain-description {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+.gain-item {
+    width: calc(100% / 4 - 30px);
+}
+
+/** Services **/
+.service-item {
+    width: calc(100% / 3 - 30px);
+}
+
+/** Team **/
+.team {
+    background-color: var(--light-grey);
+}
 .team-item-description {
     font-size: 16px;
+}
+.team-item {
+    width: calc(100% / 4 - 30px);
+    text-align: center;
 }
 
 /** Portfolio page **/
@@ -154,13 +249,23 @@ h3 {
 .footer {
     color: var(--white);
     background-color: var(--dark);
+    padding: 60px 0;
 }
+.footer .logo-link {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
 .footer .contact-info-address {
     color: inherit;
+    margin-bottom: 9px;
 }
 .footer .contacts-item-link {
     line-height: 1.71;
     color: var(--transparent-white);
+}
+.footer .contacts-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 .footer .contacts-item-link:hover,
 .footer .contacts-item-link:focus {

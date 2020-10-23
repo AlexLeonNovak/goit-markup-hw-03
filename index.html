@@ -12,29 +12,30 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="link logo-link">
-            <span class="logo"><span class="blue">Web</span>Studio</span>
-        </a>
-        <nav class="nav">
-            <ul class="menu">
-                <li class="menu-item active">
-                    <a class="link menu-item-link" href="index.html">
-                        Студия
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a class="link menu-item-link" href="portfolio.html">
-                        Портфолио
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a class="link menu-item-link" href="#contacts">
-                        Контакты
-                    </a>
-                </li>
-            </ul> <!-- End nav menu -->
-
-            <ul class="contacts">
+        <div class="container flexbox">
+            <a href="index.html" class="link logo-link">
+                <span class="logo"><span class="blue">Web</span>Studio</span>
+            </a>
+            <nav class="nav">
+                <ul class="list menu">
+                    <li class="menu-item active">
+                        <a class="link menu-item-link" href="index.html">
+                            Студия
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="link menu-item-link" href="portfolio.html">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="link menu-item-link" href="#contacts">
+                            Контакты
+                        </a>
+                    </li>
+                </ul> <!-- End nav menu -->
+            </nav>
+            <ul class="list contacts">
                 <li class="contacts-item">
                     <a class="link contacts-item-link"
                        href="mailto:info@devstudio.com"
@@ -50,52 +51,59 @@
                     </a>
                 </li>
             </ul> <!-- End nav contacts -->
-        </nav>
+        </div>
     </header>
 
     <section class="intro">
-        <h1 class="intro-title">
-            Эфективные решения для вашего бизнеса
-        </h1>
-        <button class="intro-btn btn-blue">Заказать услугу</button>
+        <div class="container">
+            <div class="intro-content">
+                <h1 class="intro-title">
+                    Эфективные решения для вашего бизнеса
+                </h1>
+                <button class="intro-btn btn-blue">Заказать услугу</button>
+            </div>
+        </div>
     </section>
 
     <main class="content">
 
-        <section class="gains">
-            <h2 class="section-title" hidden>Выгоды</h2>
-            <ul class="gain-list">
-                <li class="gain-item">
+        <section class="section gains">
+            <div class="container">
+            <h2 class="section-title hidden">Выгоды</h2>
+            <ul class="list grid gain-list">
+                <li class="grid-item gain-item">
                     <h3 class="gain-title">Внимание к деталям</h3>
                     <p class="gain-description">
                         Идейные соображения, а также начало повседневной работы по формированию позиции.
                     </p>
                 </li>
-                <li class="gain-item">
+                <li class="grid-item gain-item">
                     <h3 class="gain-title">Пунктуальность</h3>
                     <p class="gain-description">
                         Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
                     </p>
                 </li>
-                <li class="gain-item">
+                <li class="grid-item gain-item">
                     <h3 class="gain-title">Планирование</h3>
                     <p class="gain-description">
                         Равным образом консультация с широким активом в значительной степени обуславливает.
                     </p>
                 </li>
-                <li class="gain-item">
+                <li class="grid-item gain-item">
                     <h3 class="gain-title">Современные технологии</h3>
                     <p class="gain-description">
                         Значимость этих проблем настолько очевидна, что реализация плановых заданий.
                     </p>
                 </li>
             </ul>
+            </div>
         </section> <!-- End section gains -->
 
-        <section class="services">
+        <section class="section services">
+            <div class="container">
             <h2 class="section-title">Чем мы занимаемся</h2>
-            <ul class="service-list">
-                <li class="service-item">
+            <ul class="list grid service-list">
+                <li class="grid-item service-item">
                     <a class="link service-item__link" href="#">
                         <img class="service-item__img"
                              src="./images/service-1.png"
@@ -104,7 +112,7 @@
                         >
                     </a>
                 </li>
-                <li class="service-item">
+                <li class="grid-item service-item">
                     <a class="link service-item__link" href="#">
                         <img class="service-item__img"
                              src="./images/service-2.png"
@@ -113,7 +121,7 @@
                         >
                     </a>
                 </li>
-                <li class="service-item">
+                <li class="grid-item service-item">
                     <a class="link service-item__link" href="#">
                         <img class="service-item__img"
                              src="./images/service-3.png"
@@ -123,12 +131,14 @@
                     </a>
                 </li>
             </ul>
+            </div>
         </section>
 
-        <section class="team">
+        <section class="section team">
+            <div class="container">
             <h2 class="section-title">Наша команда</h2>
-            <ul class="team-list">
-                <li class="team-item">
+            <ul class="grid list team-list">
+                <li class="grid-item team-item">
                     <img class="team-item-img"
                          src="./images/team-1.jpg"
                          alt="Игорь Демьяненко"
@@ -137,7 +147,7 @@
                     <h3 class="team-item-name">Игорь Демьяненко</h3>
                     <p class="team-item-description">Product Designer</p>
                 </li>
-                <li class="team-item">
+                <li class="grid-item team-item">
                     <img class="team-item-img"
                          src="./images/team-2.jpg"
                          alt="Ольга Репина"
@@ -146,7 +156,7 @@
                     <h3 class="team-item-name">Ольга Репина</h3>
                     <p class="team-item-description">Frontend Developer</p>
                 </li>
-                <li class="team-item">
+                <li class="grid-item team-item">
                     <img class="team-item-img"
                          src="./images/team-3.jpg"
                          alt="Николай Тарасов"
@@ -155,7 +165,7 @@
                     <h3 class="team-item-name">Николай Тарасов</h3>
                     <p class="team-item-description">Marketing</p>
                 </li>
-                <li class="team-item">
+                <li class="grid-item team-item">
                     <img class="team-item-img"
                          src="./images/team-4.jpg"
                          alt="Михаил Ермаков"
@@ -165,16 +175,18 @@
                     <p class="team-item-description">UI Designer</p>
                 </li>
             </ul>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
+        <div class="container">
         <a href="index.html" class="link logo-link">
             <span class="logo"><span class="blue">Web</span>Studio</span>
         </a>
         <address class="contacts-info" id="contacts">
             <p class="contact-info-address">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="contacts">
+            <ul class="list contacts">
                 <li class="contacts-item">
                     <a class="link contacts-item-link"
                        href="mailto:info@devstudio.com"
@@ -191,6 +203,7 @@
                 </li>
             </ul>
         </address>
+        </div>
     </footer>
 </body>
 </html>
