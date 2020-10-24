@@ -5,10 +5,7 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-* {
-    background: inherit;
-    position: relative;
-}
+
 img {
     max-width: 100%;
     height: auto;
@@ -113,6 +110,7 @@ h3 {
 /** Header **/
 .header {
     padding: 25px 0;
+    border-bottom: 1px solid var(--light-grey);
 }
 .header .contacts {
     display: inline-flex;
@@ -229,20 +227,39 @@ h3 {
 .team-item {
     width: calc(100% / 4 - 30px);
     text-align: center;
+    background-color: var(--white);
+    border-radius: 3px;
+}
+.team-item-content {
+    padding: 30px 0;
 }
 
 /** Portfolio page **/
-.category-nav-link{
+.category-nav-btn{
     border: none;
     border-radius: 3px;
     cursor: pointer;
     padding: 6px 22px;
     background-color: var(--light-grey);
 }
-.category-nav-link:hover,
-.category-nav-link:focus {
+.category-nav-btn:hover,
+.category-nav-btn:focus {
     color: var(--white);
     background-color: var(--blue);
+}
+.category-card {
+    width: calc(100% / 3 - 30px);
+    border: 1px solid var(--light-grey);
+}
+.categories-nav {
+    margin-bottom: 50px;
+    justify-content: center;
+}
+.category-nav-item:not(:last-child) {
+    margin-right: 8px;
+}
+.category-card-content {
+    padding: 20px 24px;
 }
 
 /** Footer **/
