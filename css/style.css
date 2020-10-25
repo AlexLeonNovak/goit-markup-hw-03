@@ -231,6 +231,12 @@ h3 {
     text-align: center;
     background-color: var(--white);
     border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.team-item-name {
+    margin-bottom: 10px;
 }
 .team-item-content {
     padding: 30px 0;
@@ -252,6 +258,9 @@ h3 {
 .category-card {
     width: calc(100% / 3 - 30px);
     border: 1px solid var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .card-title {
     font-size: 18px;
